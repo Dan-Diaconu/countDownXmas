@@ -1,33 +1,60 @@
-.App {
-  text-align: center;
+body{
+    background-color: black;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.App{
+    text-align: center;
+    font-size: 35px;
+    margin-top: 20%;
+    background-color: black;
+    color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App-title{
+    font-size: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.Clock-days, .Clock-hours, .Clock-minutes, .Clock-seconds{
+    display: inline;
+    margin: 10px;
+    font-size: x-large;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Deadline-input{
+    font-size: 25px;
+    margin: 5px;
+   
+}
+
+@font-face {
+    font-family: 'SnowtopCaps';
+    src: url('assets/SnowtopCaps.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
   }
-  to {
-    transform: rotate(360deg);
+
+  @font-face {
+    font-family: 'DickensianChristams';
+    src: url('assets/DickensianChristmas.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
   }
+
+  .snowfontnumber {
+      font-family: 'SnowtopCaps';
+      display: inline;
+      color: red;
+      opacity: 0.5;
+  }
+  .snowfonttitle {
+    font-family: 'DickensianChristams';
+    display: inline;
+    color: green;
+}
+
+.smallText{
+    font-size: small;
+    display: inline;
+    color:white;
+    opacity: 0.5;
 }

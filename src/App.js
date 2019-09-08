@@ -1,26 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Clock from './Clock';
+import {Form, FormControl, Button} from 'react-bootstrap';
+import SnowStorm from 'react-snowstorm';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            deadLine: 'December 25, ' + new Date().getFullYear(),
+            newDeadline: '',
+            year: new Date().getFullYear()
+        }
+
+    }
+
+    changeDeadLine(){
+        const dd = new Date(this.state.newDeadline);
+
+
+        if( !isNaN(dd))
+        {
+            this.setState({ deadLine:  this.state.newDeadline});    
+        }
+
+    }
+
+    render(){
+        return (
+            <div className='App'>
+                <SnowStorm />
+                 <div className='App-titile'> 
+                 <div className='snowfonttitle'>Countdown Christmas {this.state.year}</div> { /* Countdown  [ {this.state.deadLine} ] */ } </div>
+                <Clock deadLine={this.state.deadLine}/>
+                
+            {/*
+                <Form inline>
+                    <FormControl 
+                    className='Deadline-input'
+                    placeholder='new date'
+                    onChange={ event => this.setState({newDeadline: event.target.value})} 
+                    />
+
+                    <Button 
+                        onClick={ () => this.changeDeadLine() } >
+                        Submit
+                    </Button>
+
+
+                </Form>
+            */}
+
+
+            </div>
+        )
+    }
 }
 
 export default App;
