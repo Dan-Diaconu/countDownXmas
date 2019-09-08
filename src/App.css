@@ -16,11 +16,19 @@ body{
     font-size: 50px;
 }
 
-.Clock-days, .Clock-hours, .Clock-minutes, .Clock-seconds{
+.Clock-days, .Clock-hours, .Clock-minutes{
     display: inline;
     margin: 10px;
-    font-size: x-large;
+    font-size: 50px;
 }
+
+.Clock-seconds{
+    display: inline;
+    margin: 10px;
+    font-size: 50px;
+    color: white;
+}
+
 
 .Deadline-input{
     font-size: 25px;
@@ -60,9 +68,23 @@ body{
     color:white;
     opacity: 0.7;
 }
+
 .globCss{
     position: relative;
     margin: 0;
     padding: 0;
 
 }
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 0;
+   }
+  
+  .grid-item {  
+    padding-left: 10px;    
+    text-align: center;
+    margin: 0;
+  }
+

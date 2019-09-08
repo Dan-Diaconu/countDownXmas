@@ -41,10 +41,24 @@ class Clock extends Component{
         
         return(
             <div className='snowfontnumber example'>
-                <div className='Clock-days'>{this.leading0(this.state.days)} <div className='smallText'>Days</div> </div>
-                <div className='Clock-hours'>{this.leading0(this.state.hours)} <div className='smallText'>Hours</div></div>
-                <div className='Clock-minutes'>{this.leading0(this.state.minutes)} <div className='smallText'>Minutes</div></div>
-                <div className='Clock-seconds'>{this.leading0(this.state.seconds)} <div className='smallText'>Seconds</div></div>
+                
+                
+                
+                
+
+                <div className="grid-container">
+                    <div className="grid-item"><div className='Clock-days'>{this.leading0(this.state.days)}</div></div>
+                    <div className="grid-item"><div className='Clock-hours'>{this.leading0(this.state.hours)} </div></div>
+                    <div className="grid-item"><div className='Clock-minutes'>{this.leading0(this.state.minutes)}</div></div>
+                    <div className="grid-item"><div className='Clock-seconds'>{this.leading0(this.state.seconds)} </div></div>
+                    
+                    <div className="grid-item"><div className='smallText'>Days</div></div>
+                    <div className="grid-item"><div className='smallText'>Hours</div></div>
+                    <div className="grid-item"><div className='smallText'>Minutes</div></div>      
+                    <div className="grid-item"><div className='smallText'>Seconds</div></div>              
+                    
+                </div>
+
             </div>
         )
     }
