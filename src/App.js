@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Clock from './Clock';
 import {Form, FormControl, Button} from 'react-bootstrap';
 import SnowStorm from 'react-snowstorm';
+import glob from './assets/ball.png';
+
 
 class App extends Component{
     constructor(props){
@@ -32,6 +34,8 @@ class App extends Component{
                  <div className='App-titile'> 
                  <div className='snowfonttitle'>Countdown Christmas {this.state.year}</div> { /* Countdown  [ {this.state.deadLine} ] */ } </div>
                 <Clock deadLine={this.state.deadLine}/>
+
+                <img src={glob} width="100%" className='globCss'/>
                 
             {/*
                 <Form inline>

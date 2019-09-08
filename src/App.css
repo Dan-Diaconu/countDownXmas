@@ -1,13 +1,15 @@
 body{
+    
     background-color: black;
+    overflow-y: hidden; 
+    overflow-x: hidden; 
 }
 
 .App{
     text-align: center;
     font-size: 35px;
     margin-top: 20%;
-    background-color: black;
-    color: white;
+   color: white;
 }
 
 .App-title{
@@ -57,4 +59,10 @@ body{
     display: inline;
     color:white;
     opacity: 0.7;
+}
+.globCss{
+    position: relative;
+    margin: 0;
+    padding: 0;
+
 }
