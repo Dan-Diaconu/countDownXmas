@@ -40,13 +40,10 @@ class App extends Component{
                     placeholder='new date'
                     onChange={ event => this.setState({newDeadline: event.target.value})} 
                     />
-
                     <Button 
                         onClick={ () => this.changeDeadLine() } >
                         Submit
                     </Button>
-
-
                 </Form>
             */}
 
