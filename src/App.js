@@ -3,6 +3,7 @@ import Clock from './Clock';
 import {Form, FormControl, Button} from 'react-bootstrap';
 import SnowStorm from 'react-snowstorm';
 import glob from './assets/ball.png';
+
 import Sound from 'react-sound';
 import soundfile from './assets/jingle-bells-country.mp3';
 
@@ -17,6 +18,25 @@ class App extends Component{
 
     }
 
+    componentDidMount() {
+        console.log('########### componentDidMount');
+        
+    }
+  
+    componentDidUpdate() {
+        console.log('########### componentDidUpdate');
+        window.soundManager.setup({ ignoreMobileRestrictions : true   });
+    }
+
+    componentWillUnmount() {
+        console.log('########### componentWillUnmount');
+    }
+
+    componentDidCatch(error, info) {
+        console.log(`Error log from componentDidCatch: ${error}`);
+        console.log(info);
+      }
+
     changeDeadLine(){
         const dd = new Date(this.state.newDeadline);
 
@@ -29,9 +49,14 @@ class App extends Component{
     }
 
     render(){
+        // console.log('########### -----> render');
+            
+        
         return (
             <div className='App'>
-                <audio ref='audio_tag' src={soundfile} no-controls autoPlay/>
+
+            <Sound url={soundfile} playStatus={Sound.status.PLAYING} loop autoLoad/>
+
 
                 <SnowStorm />
                  <div className='App-titile'> 
