@@ -3,7 +3,8 @@ import Clock from './Clock';
 import {Form, FormControl, Button} from 'react-bootstrap';
 import SnowStorm from 'react-snowstorm';
 import glob from './assets/ball.png';
-
+import Sound from 'react-sound';
+import soundfile from './assets/jingle-bells-country.mp3';
 
 class App extends Component{
     constructor(props){
@@ -30,6 +31,8 @@ class App extends Component{
     render(){
         return (
             <div className='App'>
+                <audio ref='audio_tag' src={soundfile} no-controls autoPlay/>
+
                 <SnowStorm />
                  <div className='App-titile'> 
                  <div className='snowfonttitle'>Countdown Christmas {this.state.year}</div> { /* Countdown  [ {this.state.deadLine} ] */ } </div>
